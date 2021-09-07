@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="card ">
+    <div class="card-body">
+      <h5 class="card-title">Enter<br> Credentials:</h5>
+      <form [formGroup]="myForm" novalidate>
+        <div class="form-group">
+          <input class="form-control" id="email" [(ngModel)]="user.email" name ="email" [ngClass]="{ 'is-invalid': inboudClick && f.input.errors }"
+          style="align-content:center; margin: 0 auto; width:100%;" type="text" placeholder="Email"
+          formControlName="input">
+          <div *ngIf="inboudClick && f.input.errors" class="invalid-feedback">
+            <div *ngIf="f.input.errors.required">Email is required</div>
+            <div *ngIf="f.input.errors.cannotContainSpace">No Whitespace Allowed</div>
+        </div>
+        </div>
+        <br>
+        <br>
+        <div class="form-group">
+          <input class="form-control" id="password" [(ngModel)]="user.password" name ="password" [ngClass]="{ 'is-invalid': inboudClick && f.passwordValidator.errors}"
+            style="align-content:center; margin: 0 auto; width:100%;" type="password" placeholder="Password" formControlName="passwordValidator" >
+            <div *ngIf="inboudClick && f.passwordValidator.errors" class="invalid-feedback">
+              <div *ngIf="f.passwordValidator.errors.required">Password is required</div>
+              <div *ngIf="f.passwordValidator.errors.cannotContainSpace">No Whitespace Allowed</div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-dark btn-outline-light" type="button" (click)="validatePatientCreds()">
+          <span class="spinner-border spinner-border-sm mr-1"></span>
+          Login
+        </button>
+        <br>
+        <br>
+      </form>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>

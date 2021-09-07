@@ -1,0 +1,30 @@
+.card-header {
+  background-color: #343a40;
+  color: white;
+  border-radius: 10px;
+}
+.card-body {
+  background-color: #343a40;
+  border-radius: 25px;
+  padding: 20px;
+  color: white;
+}
+.card {
+  text-align: center;
+  border-radius: 25px;
+  padding: 20px;
+  background-color: #343a40;
+}
+.container {
+  width: 60%;
+  max-width: 500px;
+  min-width: 400px;
+  align-content:center;
+  margin: 0 auto;
+}
+
+form{
+  width:50%;
+  align-content:center;
+  margin: 0 auto;
+}
